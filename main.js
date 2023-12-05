@@ -199,6 +199,13 @@ function resizeRendererToDisplaySize(renderer) {
     return needResize;
 }
 
+///text function
+// function drawText(text, x, y, ctx) {
+//   ctx.font = '20px Arial';
+//   ctx.fillStyle = 'white';
+//   ctx.textAlign = 'center';
+//   ctx.fillText(text, x, y);
+// }
 
 async function render() {
 
@@ -219,6 +226,8 @@ async function render() {
     camera.updateProjectionMatrix();
 
 
+
+
 //could be modified!!!
     galaxy.updateScale(camera)
     // galaxy.increaseStarsOverTime(2000,10000)
@@ -228,6 +237,11 @@ async function render() {
     renderPipeline()
     requestAnimationFrame(render)
     TWEEN.update();
+
+    // const ctx = renderer.getContext();
+
+    // Draw text
+    // drawText('Use your mouse to navigate', window.innerWidth / 2, 30, ctx);
 }
 
 function renderPipeline() {
