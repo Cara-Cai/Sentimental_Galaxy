@@ -23,6 +23,7 @@ html, body {
     text-align: center;
     letter-spacing: 0.2em;
     animation: blink 3s linear infinite; 
+    font-size:20px
 }
 
 @media (max-width: 768px) {
@@ -54,10 +55,12 @@ html, body {
 
 .emotion-col{
     display:inline-block;
-    font-size: 12px;
+    font-size: 20px;
     text-transform: uppercase;
     color: rgb(78, 78, 78);
     margin:40px;
+
+
 
 
 }
@@ -71,5 +74,6 @@ html, body {
 
 .label{
 margin-bottom:20px;
+font-size:20px;
 
 }
