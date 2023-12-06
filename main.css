@@ -12,7 +12,7 @@ html, body {
   #overlay-text {
     font-style: italic;
     position: absolute; 
-    bottom: 10%; 
+    top: 10%; 
     left: 50%; 
     transform: translateX(-50%); 
     font-size: 12px;
@@ -41,7 +41,35 @@ html, body {
 }
 
 
+#emotion-container {
+    text-align: center;
+    margin-top: 10px;
+    position: absolute; 
+    bottom: 10%; 
+    left: 50%; 
+    transform: translateX(-50%);
+    /* color: rgb(100, 100, 100); */
+}
 
 
+.emotion-col{
+    display:inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: rgb(78, 78, 78);
+    margin:40px;
 
-  
+
+}
+
+
+.highlight {
+    color: whitesmoke; /* Or any bright color of your choice */
+    /* font-weight: bold; */
+}
+
+
+.label{
+margin-bottom:20px;
+
+}

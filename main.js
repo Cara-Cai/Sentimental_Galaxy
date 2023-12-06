@@ -25,6 +25,7 @@ const detectionInterval = 5; // Run face detection every 5 frames
 let happyValue, neutralValue, sadValue;
 let faceapi;
 let detections = [];
+let processed_happyValue,processed_neutralValue,processed_sadValue;
 // let happyValue;
 
 ///////////////////////////////////////- face.js
@@ -72,9 +73,15 @@ function gotFaces(error, result) {
       happyValue = detections[0].expressions.happy;
       sadValue = detections[0].expressions.sad;
       neutralValue = detections[0].expressions.neutral;
+
       console.log("Happy Value:", happyValue,"Neutral Value:", neutralValue,"Sad Value:", sadValue); // Log happyValue at intervals
 
+      // Example usage
+      processed_happyValue =p.nf(happyValue*100, 2, 2)
+      processed_neutralValue =p.nf(neutralValue*100, 2, 2)
+      processed_sadValue =p.nf(sadValue*100, 2, 2)
 
+      updateEmotionValues(processed_happyValue,processed_neutralValue, processed_sadValue); // Update this with real values
 ////////////////////////////////// - galaxychanging
       galaxy.updateStarVisibility(happyValue,sadValue,neutralValue);
       galaxy.updateStarColor(happyValue,sadValue,neutralValue,2000);
@@ -92,6 +99,49 @@ function gotFaces(error, result) {
     }
     myp5=new p5(sketch)
 }
+
+
+//--------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------
+
+function updateEmotionValues(happy, neutral, sad) {
+  // Update the values
+  document.getElementById('happy-value').textContent = happy;
+  document.getElementById('neutral-value').textContent = neutral;
+  document.getElementById('sad-value').textContent = sad;
+
+  // Determine the highest value
+  const maxValue = Math.max(happy, neutral, sad);
+
+  // Highlight the highest value
+  highlightMax('happy', happy, maxValue);
+  highlightMax('neutral', neutral, maxValue);
+  highlightMax('sad', sad, maxValue);
+}
+
+function highlightMax(emotion, value, maxValue) {
+  const label = document.getElementById(`${emotion}-label`);
+  const valueDiv = document.getElementById(`${emotion}-value`);
+
+  console.log(`Highlighting: ${emotion}, Value: ${value}, MaxValue: ${maxValue}`);
+  console.log(`Elements:`, label, valueDiv); // Check if elements are correctly selected
+
+  console.log(maxValue,value)
+  value=Number(value)
+
+  if (value === maxValue) {
+    console.log("hiiiiiiiii")
+      label.classList.add('highlight');
+      valueDiv.classList.add('highlight');
+  } else {
+      label.classList.remove('highlight');
+      valueDiv.classList.remove('highlight');
+  }
+}
+
 
 
 //--------------------------------------------------------------------------------

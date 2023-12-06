@@ -29,10 +29,39 @@
         <!-- <script src="face.js"></script> -->
         <canvas id="canvas" data-engine="three.js r146"></canvas>
         <script src="main.js" type="module" async defer></script>
+        <!-- <div id="emotion-container">
+            <div class="emotion-textrow">
+                <div id="happy-label">Happy</div>
+                <div id="neutral-label">Neutral</div>
+                <div id="sad-label">Sad</div>
+            </div>
+            <div class="emotion-valuerow">
+                <div id="happy-value">0</div>
+                <div id="neutral-value">0</div>
+                <div id="sad-value">0</div>
+            </div>
+        </div> -->
+        <div id="emotion-container">
+            <div class="emotion-col">
+                <div class = "label" id="happy-label">Happy</div>
+                <div id="happy-value">0</div>
+            </div>
+            
+            <div class="emotion-col">
+                <div class = "label" id="neutral-label">Neutral</div>
+                <div id="neutral-value">0</div>
+            </div>
+            <div class="emotion-col">
+                <div class = "label" id="sad-label">Sad</div>
+                <div id="sad-value">0</div>
+            </div>
+        
+
+        </div>
         <div id="overlay-text">
         Use your mouse to navigate
     </div>
-    
+    <!-- <script src="textupdate.js" type="module" async defer></script> -->
 </body>
 </html>
 
