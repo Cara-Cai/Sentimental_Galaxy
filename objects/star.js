@@ -13,7 +13,8 @@ const starTypes = {
 }
 
 
-const texture = new THREE.TextureLoader().load('../resources/sprite120.png')
+// const texture = new THREE.TextureLoader().load('../resources/sprite120.png')
+const texture = new THREE.TextureLoader().load('https://cara-cai.github.io/Sentimental_Galaxy/resources/sprite120.png')
 const materials = starTypes.colorNeutral.map((color) => new THREE.SpriteMaterial({map: texture, color: color}))
 const deltaTime=10
 
