@@ -23,12 +23,12 @@ html, body {
     text-align: center;
     letter-spacing: 0.2em;
     animation: blink 3s linear infinite; 
-    font-size:20px
+    /* font-size:20px */
 }
 
 @media (max-width: 768px) {
     #overlay-text {
-        font-size: 0.5em;
+        font-size: 12px;
     }
 }
 
@@ -55,12 +55,10 @@ html, body {
 
 .emotion-col{
     display:inline-block;
-    font-size: 20px;
+    font-size: 12px;
     text-transform: uppercase;
     color: rgb(78, 78, 78);
     margin:40px;
-
-
 
 
 }
@@ -74,6 +72,6 @@ html, body {
 
 .label{
 margin-bottom:20px;
-font-size:20px;
+font-size:12px;
 
 }
