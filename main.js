@@ -311,8 +311,8 @@ function renderPipeline() {
 }
 
 initThree()
-let axes = new THREE.AxesHelper(5.0)
-scene.add(axes)
+// let axes = new THREE.AxesHelper(5.0)
+// scene.add(axes)
 
 let galaxy = new Galaxy(scene)
 requestAnimationFrame(render)
