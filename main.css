@@ -13,8 +13,10 @@ body {
 
 #overlay-text {
   font-style: italic;
+  /* to fit */
+  font-style:bold;
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 12px;
@@ -30,6 +32,10 @@ body {
 
 #loading {
   font-style: italic;
+  /* to fit */
+  font-style:bold;
+
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -65,7 +71,10 @@ body {
   text-align: center;
   margin-top: 10px;
   position: absolute;
-  bottom: 10%;
+  /* bottom: 10%; */
+/* to fit */
+  font-style:bold;
+  top: 20%;
   left: 50%;
   transform: translateX(-50%);
   /* color: rgb(100, 100, 100); */
