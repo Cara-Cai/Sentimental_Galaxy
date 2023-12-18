@@ -28,6 +28,7 @@ body {
   letter-spacing: 0.2em;
   animation: blink 3s linear infinite;
   /* font-size:20px */
+  user-select: none;
 }
 
 #loading {
@@ -49,6 +50,7 @@ body {
   letter-spacing: 0.2em;
   animation: blink 3s linear infinite;
   /* font-size:20px */
+  user-select: none;
 }
 
 @media (max-width: 768px) {
@@ -78,6 +80,8 @@ body {
   left: 50%;
   transform: translateX(-50%);
   /* color: rgb(100, 100, 100); */
+
+  user-select: none;
 }
 
 .emotion-col {
